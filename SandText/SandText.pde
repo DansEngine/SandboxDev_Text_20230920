@@ -1,8 +1,8 @@
 //Global Variables
 int appWidth, appHeight;
-String title, footer, Wahoo;
+String title="Wahoo!?", footer="drip", Wahoo;
 PFont titleFont, footerFont;
-color cyan=#00FFFD, resetDefaultInk=#FFFFFF;
+color cyan=#00FFFD, resetDefaultInk=#FFFFFF, red=#FC0000;
 int sizeFont, size;
 float xTitle, yTitle, WidthTitle, HeightTitle;
 float xFooter, yFooter, WidthFooter, HeightFooter;
@@ -46,11 +46,16 @@ void draw () {
   //Text is same size or relative to rect
   //
   //DrawingFont
-  fill(cyan);
+  fill(red);
   textAlign(CENTER,CENTER); //ALIGN X&Y, see processing.org / Refrence
-  size = 10;
+  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+  size = 60;
   textFont(titleFont, size);
-  text(Wahoo, WidthFooter, HeightFooter);
+  text(title, xTitle, yTitle, WidthTitle, HeightTitle);
+  fill(cyan);
+  textFont (footerFont, size);
+  text(footer, xFooter, yFooter, WidthFooter, HeightFooter);
+  fill(resetDefaultInk); //ink
   //
   //rect(xTitle, yTitle, WidthTitle, HeightTitle); //Title:WAhoo!!
   //rect(xFooter, yFooter, WidthFooter, HeightFooter); //Footer: drip

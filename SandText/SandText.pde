@@ -1,6 +1,6 @@
 //Global Variables
 int appWidth, appHeight;
-String title="Wahoo!?", footer="drip", Wahoo;
+String title="Wahoo!?", footer="1+1=11", Wahoo;
 PFont titleFont, footerFont;
 color cyan=#00FFFD, resetDefaultInk=#FFFFFF, red=#FC0000;
 int sizeFont, size;
@@ -8,8 +8,8 @@ float xTitle, yTitle, WidthTitle, HeightTitle;
 float xFooter, yFooter, WidthFooter, HeightFooter;
 //
 void setup() {
-  //fullScreen();
-  size(600,400);
+  fullScreen();
+  //size(600,400);
   println("displayX: ", +displayWidth, "displayY: ", +displayHeight);
   appWidth = width;
   appHeight = height;
@@ -26,6 +26,8 @@ void setup() {
   //
   // DIVs or rect()
   // Layout our text space and typographical features
+  //
+  fill(0);
   rect( xTitle, yTitle, WidthTitle, HeightTitle );
   rect( xFooter, yFooter, WidthFooter, HeightFooter );
   //
@@ -49,7 +51,7 @@ void draw () {
   fill(red);
   textAlign(CENTER,CENTER); //ALIGN X&Y, see processing.org / Refrence
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  size = 60;
+  size = 100;
   textFont(titleFont, size);
   text(title, xTitle, yTitle, WidthTitle, HeightTitle);
   fill(cyan);
